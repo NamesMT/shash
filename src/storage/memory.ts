@@ -1,5 +1,10 @@
 import type { SHashStorageInterface } from '~/SHash'
 
+/**
+ * This is a simple in-memory storage implementation.
+ * 
+ * This is not recommended for production use, but it is useful for testing.
+ */
 export class MemoryStorage implements SHashStorageInterface {
   store: Record<string, string> = {}
 
