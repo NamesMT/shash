@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.2.1
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.2.0...v0.2.1)
+
+### 🩹 Fixes
+
+- Should support destructured usage ([106f500](https://github.com/namesmt/shash/commit/106f500))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.0
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.1.1...v0.2.0)
