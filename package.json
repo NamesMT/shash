@@ -51,10 +51,6 @@
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm run build"
   },
-  "dependencies": {
-    "consola": "^3.2.3",
-    "std-env": "^3.7.0"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.2",
     "@types/node": "^20.14.11",
