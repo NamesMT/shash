@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { createSHashHelper } from '~/index'
+import { SHash } from '~/index'
 import { MemoryStorage } from '~/storage/memory'
 
 describe('basic tests', () => {
-  it('createSHashHelper should work', async () => {
-    expect(createSHashHelper).toBeTypeOf('function')
+  it('class SHash should work', async () => {
+    expect(SHash).toBeTypeOf('function')
 
-    const helper = createSHashHelper(new MemoryStorage(), str => `${str}2`)
+    const helper = new SHash(new MemoryStorage(), str => `${str}2`)
 
     expect(helper).toMatchObject({
       getHash: expect.any(Function),
