@@ -1,4 +1,4 @@
-# starter-ts ![TypeScript heart icon](https://img.shields.io/badge/♡-%23007ACC.svg?logo=typescript&logoColor=white)
+# shash ![TypeScript heart icon](https://img.shields.io/badge/♡-%23007ACC.svg?logo=typescript&logoColor=white)
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,20 +6,20 @@
 [![Bundlejs][bundlejs-src]][bundlejs-href]
 [![jsDocs.io][jsDocs-src]][jsDocs-href]
 
-**starter-ts** is my starter/boilerplate for typescript projects.  
-This template assumes you are using Linux, or the included Dev Container.
+**shash** (SHash)
 
-### Notes (remove this section when you use the template)
-#### * Do a global replace for `starter-ts` and `NamesMT`
+SHash is not a cryptographic hashing algorithm, it is a collection of hashing helpers.
 
-#### * Notable behavior:
-- [antfu/eslint-config](https://github.com/antfu/eslint-config)
-  - Style error silencing is commented out
+The S in SHash stands for Stateful.
 
-#### * Script: `play` vs `play:useBuild` for playground testing?
-- `play` script uses `unbuild`'s [passive watcher (stub mode)](https://github.com/unjs/unbuild#-passive-watcher), which allows you to execute new code **live** without rebuilding the project. The cons is TS declarations are not available.
-- `play:useBuild` builds a static version of the package, useful for testing the actual look/behavior when shipping.
-### END NOTE
+SHash requires a storage interface to be passed in, which is used to store the stateful salt.
+
+SHash aims to be simple and easy to use, to help you implement a hash secret with multiple layers of security:  
+SHash is stateful, which means that there is a layer of database/storage.  
+SHash allows you to specify your additional salt, which could add two layers: hard-coded salt and environment salt.  
+
+SHash supports any hashing algorithm, it is recommended to use SHA256 for the balance of security and performance,  
+Do note that SHA256 is NOT SAFE for highly sensitive information like passwords, because it is relatively fast and easier for an attacker to crack your passwords in case of a full breach of all layers.
 
 ## Features
 - [x] TypeScript ready!
@@ -28,19 +28,19 @@ This template assumes you are using Linux, or the included Dev Container.
 ### Install package:
 ```sh
 # npm
-npm install starter-ts
+npm install shash
 
 # yarn
-yarn add starter-ts
+yarn add shash
 
 # pnpm (recommended)
-pnpm install starter-ts
+pnpm install shash
 ```
 
 ### Import:
 ```ts
 // ESM
-import { hello } from 'starter-ts'
+import { hello } from 'shash'
 ```
 
 ## Roadmap
@@ -53,15 +53,15 @@ import { hello } from 'starter-ts'
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/starter-ts?labelColor=18181B&color=F0DB4F
-[npm-version-href]: https://npmjs.com/package/starter-ts
-[npm-downloads-src]: https://img.shields.io/npm/dm/starter-ts?labelColor=18181B&color=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/starter-ts
-[codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/starter-ts/main?labelColor=18181B&color=F0DB4F
-[codecov-href]: https://codecov.io/gh/namesmt/starter-ts
-[license-src]: https://img.shields.io/github/license/namesmt/starter-ts.svg?labelColor=18181B&color=F0DB4F
-[license-href]: https://github.com/namesmt/starter-ts/blob/main/LICENSE
-[bundlejs-src]: https://img.shields.io/bundlejs/size/starter-ts?labelColor=18181B&color=F0DB4F
-[bundlejs-href]: https://bundlejs.com/?q=starter-ts
+[npm-version-src]: https://img.shields.io/npm/v/shash?labelColor=18181B&color=F0DB4F
+[npm-version-href]: https://npmjs.com/package/shash
+[npm-downloads-src]: https://img.shields.io/npm/dm/shash?labelColor=18181B&color=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/shash
+[codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/shash/main?labelColor=18181B&color=F0DB4F
+[codecov-href]: https://codecov.io/gh/namesmt/shash
+[license-src]: https://img.shields.io/github/license/namesmt/shash.svg?labelColor=18181B&color=F0DB4F
+[license-href]: https://github.com/namesmt/shash/blob/main/LICENSE
+[bundlejs-src]: https://img.shields.io/bundlejs/size/shash?labelColor=18181B&color=F0DB4F
+[bundlejs-href]: https://bundlejs.com/?q=shash
 [jsDocs-src]: https://img.shields.io/badge/Check_out-jsDocs.io---?labelColor=18181B&color=F0DB4F
-[jsDocs-href]: https://www.jsdocs.io/package/starter-ts
+[jsDocs-href]: https://www.jsdocs.io/package/shash

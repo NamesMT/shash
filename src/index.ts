@@ -1,2 +1,2 @@
-export * from './logger'
-export const shouldBe200 = 200
+export { createSHashHelper } from './SHash'
+export type { SHashStorageInterface } from './SHash'
