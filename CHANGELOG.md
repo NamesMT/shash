@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.1.1...v0.2.0)
+
+### 💅 Refactors
+
+- ⚠️  Refactored to `SHash` class ([975f430](https://github.com/namesmt/shash/commit/975f430))
+
+### 📖 Documentation
+
+- **storage/memory:** Add JSDoc ([9d6f0e5](https://github.com/namesmt/shash/commit/9d6f0e5))
+- **README:** Populate usage docs ([b1091a3](https://github.com/namesmt/shash/commit/b1091a3))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Refactored to `SHash` class ([975f430](https://github.com/namesmt/shash/commit/975f430))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.1.1
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.1.0...v0.1.1)
