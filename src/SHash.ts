@@ -15,35 +15,35 @@ export interface SHashStorageInterface {
  * @param hasher - The hashing algorithm, which should return a string.
  */
 export class SHash {
-  constructor(private storage: SHashStorageInterface, private hasher: (input: string) => string | Promise<string>) {}
+  constructor(private storage: SHashStorageInterface, private hasher: (input: string) => string | Promise<string>) { }
 
   /**
    * Get a hash for a given partition and id, create if not exists.
    */
-  async getHash(salt: string, partition: string, id: string): Promise<string> {
+  getHash = async (salt: string, partition: string, id: string): Promise<string> => {
     return this._getHash(salt, partition, id, true) as Promise<string>
   }
 
   /**
    * Get existing hash for a given partition and id.
    */
-  async getExistHash(salt: string, partition: string, id: string) {
+  getExistHash = async (salt: string, partition: string, id: string) => {
     return this._getHash(salt, partition, id, false)
   }
 
-  async verifyHash(salt: string, partition: string, id: string, key: string) {
+  verifyHash = async (salt: string, partition: string, id: string, key: string) => {
     const hash = await this.getHash(salt, partition, id)
     if (hash !== key)
       throw new Error('Hash mismatch')
   }
 
-  async verifyExistHash(salt: string, partition: string, id: string, key: string) {
+  verifyExistHash = async (salt: string, partition: string, id: string, key: string) => {
     const hash = await this.getExistHash(salt, partition, id)
     if (!hash || hash !== key)
       throw new Error('Hash mismatch')
   }
 
-  private async _getHash(salt: string, partition: string, id: string, create = true): Promise<string | undefined> {
+  private _getHash = async (salt: string, partition: string, id: string, create = true): Promise<string | undefined> => {
     this._validateParams(partition, id)
 
     let statefulSalt = await this.storage.getSalt(partition, id)
