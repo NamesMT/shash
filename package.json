@@ -1,9 +1,9 @@
 {
-  "name": "shash",
+  "name": "@namesmt/shash",
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@9.6.0",
-  "description": "",
+  "description": "SHash is a collection of helpers to implement a hash secret with multiple layers of security",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/namesmt",
@@ -13,7 +13,11 @@
     "url": "git+https://github.com/namesmt/shash.git"
   },
   "bugs": "https://github.com/namesmt/shash/issues",
-  "keywords": [],
+  "keywords": [
+    "hash",
+    "salt",
+    "secret"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
