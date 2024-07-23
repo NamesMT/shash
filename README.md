@@ -21,6 +21,8 @@ SHash allows you to specify your additional salt, which could add two layers: ha
 SHash supports any hashing algorithm, it is recommended to use SHA256 for the balance of security and performance,  
 Do note that SHA256 is NOT SAFE for highly sensitive information like passwords, because it is relatively fast and easier for an attacker to crack your passwords in case of a full breach of all layers.
 
+Note: Hashing algorithm is not included in this package, you can use any hashing algorithm you want.
+
 ## Features
 - [x] TypeScript ready!
 
@@ -37,10 +39,24 @@ yarn add @namesmt/shash
 pnpm install @namesmt/shash
 ```
 
-### Import:
+### Import and use:
 ```ts
 // ESM
-import { hello } from '@namesmt/shash'
+import { MemoryStorage, SHash } from '@namesmt/shash'
+
+function demoHash(str: string) {
+  return `${str}-demohashed`
+}
+
+const {
+  getHash, // getHash will create a new salt for the partition and id if it does not exist.
+  getExistHash, // getExistHash only returns the hash if it the stateful salt exists.
+  verifyHash, // verify functions will call get* under-the-hood and then verify it with the given key, throws if it does not match.
+  verifyExistHash,
+} = new SHash(new MemoryStorage(), demoHash) // You could pass in any hashing algorithm
+
+// It is recommended to use a hybrid salt from environment variable and hard-coded like: `salted${env.SECRET_SAUCE}`
+const hash = await getHash('salt', 'partition', 'id')
 ```
 
 ## Roadmap
