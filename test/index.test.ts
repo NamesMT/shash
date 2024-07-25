@@ -32,7 +32,7 @@ describe('basic tests', () => {
 
     // validateParams check
     // @ts-expect-error params should be strings
-    await expect(helper.getHash(2, 3, 4)).rejects.toThrowError('Invalid partition or id')
+    await expect(helper.getHash(2, 3, 4)).rejects.toThrowError('Invalid params')
   })
 
   it('destructured usage should work', async () => {
@@ -55,6 +55,6 @@ describe('basic tests', () => {
 
     // validateParams check
     // @ts-expect-error params should be strings
-    await expect(getHash(2, 3, 4)).rejects.toThrowError('Invalid partition or id')
+    await expect(getHash(2, 3, 4)).rejects.toThrowError('Invalid params')
   })
 })
