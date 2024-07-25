@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.0...v0.3.1)
+
+### 🏡 Chore
+
+- Remove old `SHash.md` in source ([93e806e](https://github.com/namesmt/shash/commit/93e806e))
+- Remove old comment ([b96182b](https://github.com/namesmt/shash/commit/b96182b))
+- JSDoc and move valid function out of class ([c642a2e](https://github.com/namesmt/shash/commit/c642a2e))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.3.0
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.2.1...v0.3.0)
