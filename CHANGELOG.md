@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.2.1...v0.3.0)
+
+### 💅 Refactors
+
+- ⚠️  Remove sample `MemoryStorage` export ([e11a635](https://github.com/namesmt/shash/commit/e11a635))
+
+### 📖 Documentation
+
+- **README:** Update ([82eb0d4](https://github.com/namesmt/shash/commit/82eb0d4))
+- **README:** Update ([7e22471](https://github.com/namesmt/shash/commit/7e22471))
+
+### 🏡 Chore
+
+- Update recommended extensions list ([dda3622](https://github.com/namesmt/shash/commit/dda3622))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove sample `MemoryStorage` export ([e11a635](https://github.com/namesmt/shash/commit/e11a635))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+- Trung Dang ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.1
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.2.0...v0.2.1)

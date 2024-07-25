@@ -1,7 +1,7 @@
 {
   "name": "@namesmt/shash",
   "type": "module",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "packageManager": "pnpm@9.6.0",
   "description": "SHash is a collection of helpers to implement a hash secret with multiple layers of security",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
