@@ -1,6 +1,5 @@
 /**
  * @module SHash
- * Please refer to [SHash.md](./SHash.md) for more information.
  */
 
 export interface SHashStorageInterface {
