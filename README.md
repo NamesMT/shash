@@ -6,17 +6,16 @@
 [![Bundlejs][bundlejs-src]][bundlejs-href]
 [![jsDocs.io][jsDocs-src]][jsDocs-href]
 
-**shash** (SHash)
+**shash** (SHash - Stateful-salt Hash)
 
-SHash is not a cryptographic hashing algorithm, it is a collection of helpers to implement a hash secret with multiple layers of security.
-
-The S in SHash stands for Stateful.
+SHash is not a cryptographic hashing algorithm, it is a collection of helpers to implement a hash secret system with multiple layers of security.
 
 SHash requires a storage interface to be passed in, which is used to store the stateful salt.
 
 SHash aims to be simple and easy to use, to help you implement a hash secret with multiple layers of security:  
-SHash is stateful, which means that there is a layer of database/storage.  
+SHash stores a stateful salt, which means that there is a layer of database/storage.  
 SHash allows you to specify your additional salt, which could add two layers: hard-coded salt and environment salt.  
+The hashed value is calculated as needed with all the salts and is not stored.  
 
 SHash supports any hashing algorithm, it is recommended to use SHA256 for the balance of security and performance,  
 Do note that SHA256 is NOT SAFE for highly sensitive information like passwords, because it is relatively fast and easier for an attacker to crack your passwords in case of a full breach of all layers.
