@@ -41,8 +41,21 @@ pnpm install @namesmt/shash
 ### Import and use:
 ```ts
 // ESM
-import { MemoryStorage, SHash } from '@namesmt/shash'
+import { SHash } from '@namesmt/shash'
 
+/**
+ * This is a simple in-memory storage implementation.
+ * 
+ * This is not recommended for production use, but it is useful for testing.
+ */
+class MemoryStorage implements SHashStorageInterface {
+  store: Record<string, string> = {}
+
+  async getSalt(partition: string, id: string) { return this.store[`${partition}#${id}`] }
+  async setSalt(partition: string, id: string, value: string) { this.store[`${partition}#${id}`] = value }
+}
+
+// A simple hash function for demo purposes
 function demoHash(str: string) {
   return `${str}-demohashed`
 }
