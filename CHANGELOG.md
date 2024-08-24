@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.2
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.1...v0.3.2)
+
+### 🩹 Fixes
+
+- `validParams` error message ([211e782](https://github.com/namesmt/shash/commit/211e782))
+
+### 🏡 Chore
+
+- Housekeeping ([5361677](https://github.com/namesmt/shash/commit/5361677))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.3.1
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.0...v0.3.1)
