@@ -2,7 +2,7 @@
   "name": "@namesmt/shash",
   "type": "module",
   "version": "0.3.1",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.8.0",
   "description": "SHash is a collection of helpers to implement a hash secret with multiple layers of security",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
@@ -52,21 +52,21 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.2",
-    "@types/node": "^20.14.11",
-    "@vitest/coverage-v8": "^2.0.4",
-    "eslint": "^9.7.0",
-    "lint-staged": "^15.2.7",
+    "@antfu/eslint-config": "^2.27.1",
+    "@types/node": "^20.16.1",
+    "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^9.9.1",
+    "lint-staged": "^15.2.9",
     "simple-git-hooks": "^2.11.1",
-    "tsx": "^4.16.2",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.4"
+    "vitest": "^2.0.5"
   },
   "pnpm": {
     "overrides": {
-      "hasown": "npm:@nolyfill/hasown@^1",
-      "is-core-module": "npm:@nolyfill/is-core-module@^1"
+      "hasown": "npm:@nolyfill/hasown@^1.0.29",
+      "is-core-module": "npm:@nolyfill/is-core-module@^1.0.39"
     }
   },
   "simple-git-hooks": {
