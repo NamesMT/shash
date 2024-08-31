@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.4
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.3...v0.3.4)
+
+### 🚀 Enhancements
+
+- Add `cleanSalt`, tests, and update MemoryStorage implement ([7510496](https://github.com/namesmt/shash/commit/7510496))
+
+### 🏡 Chore
+
+- Retro-update CHANGELOG ([8759994](https://github.com/namesmt/shash/commit/8759994))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.3.3
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.2...v0.3.3)
