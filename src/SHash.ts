@@ -13,7 +13,7 @@ export interface SHashStorageInterface {
   /**
    * Set the salt for the given partition and id.
    */
-  setSalt: (partition: string, id: string, value: string) => Promise<void>
+  setSalt: (partition: string, id: string, value: string | undefined) => Promise<void>
 }
 
 /**
