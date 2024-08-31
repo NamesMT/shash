@@ -7,7 +7,7 @@
 
 ### 🌊 Types
 
-- **setSalt:** Should allow undefined value for cleaning the salt ([37dd58c](https://github.com/namesmt/shash/commit/37dd58c))
+- **setSalt:** Should allow undefined value for cleaning the salt ([37dd58c](https://github.com/namesmt/shash/commit/37dd58c)) (minor types breaking)
 
 ### ❤️ Contributors
 
@@ -134,4 +134,3 @@
 ### ❤️ Contributors
 
 - NamesMT ([@NamesMT](http://github.com/NamesMT))
-
