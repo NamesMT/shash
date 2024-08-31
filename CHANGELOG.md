@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.3
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.2...v0.3.3)
+
+### 🌊 Types
+
+- **setSalt:** Should allow undefined value for cleaning the salt ([37dd58c](https://github.com/namesmt/shash/commit/37dd58c))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.3.2
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.1...v0.3.2)
