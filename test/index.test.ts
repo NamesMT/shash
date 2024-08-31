@@ -26,6 +26,10 @@ describe('basic tests', () => {
     await expect(helper.verifyExistHash('salt', 'partition', 'id', hash)).resolves.toBeUndefined()
     await expect(helper.verifyExistHash('salt', 'partition', 'id', 'saltpartitionid2')).rejects.toThrowError()
 
+    // cleanSalt check
+    await expect(helper.cleanSalt('partition', 'id')).resolves.toBeUndefined()
+    await expect(helper.getExistHash('salt', 'partition', 'id')).resolves.toBeUndefined()
+
     // verifyHash create check
     await expect(helper.verifyHash('salt', 'partition', 'id2', 'saltpartitionid22')).rejects.toThrowError()
     await expect(helper.getExistHash('salt', 'partition', 'id2')).resolves.toContain('saltpartitionid22')
@@ -36,7 +40,7 @@ describe('basic tests', () => {
   })
 
   it('destructured usage should work', async () => {
-    const { getHash, getExistHash, verifyHash, verifyExistHash } = new SHash(new MemoryStorage(), str => `${str}2`)
+    const { getHash, getExistHash, verifyHash, verifyExistHash, cleanSalt } = new SHash(new MemoryStorage(), str => `${str}2`)
 
     // Exist check (should currently not exist)
     await expect(getExistHash('salt', 'partition', 'id')).resolves.toBeUndefined()
@@ -48,6 +52,10 @@ describe('basic tests', () => {
     const hash = (await getExistHash('salt', 'partition', 'id'))!
     await expect(verifyExistHash('salt', 'partition', 'id', hash)).resolves.toBeUndefined()
     await expect(verifyExistHash('salt', 'partition', 'id', 'saltpartitionid2')).rejects.toThrowError()
+
+    // cleanSalt check
+    await expect(cleanSalt('partition', 'id')).resolves.toBeUndefined()
+    await expect(getExistHash('salt', 'partition', 'id')).resolves.toBeUndefined()
 
     // verifyHash create check
     await expect(verifyHash('salt', 'partition', 'id2', 'saltpartitionid22')).rejects.toThrowError()

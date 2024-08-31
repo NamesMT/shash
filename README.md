@@ -52,7 +52,12 @@ class MemoryStorage implements SHashStorageInterface {
   store: Record<string, string> = {}
 
   async getSalt(partition: string, id: string) { return this.store[`${partition}#${id}`] }
-  async setSalt(partition: string, id: string, value: string) { this.store[`${partition}#${id}`] = value }
+  async setSalt(partition: string, id: string, value: string | undefined) {
+    if (value === undefined)
+      delete this.store[`${partition}#${id}`]
+    else
+      this.store[`${partition}#${id}`] = value
+  }
 }
 
 // A simple hash function for demo purposes
@@ -65,6 +70,7 @@ const {
   getExistHash, // getExistHash only returns the hash if it the stateful salt exists.
   verifyHash, // verify functions will call get* under-the-hood and then verify it with the given key, throws if it does not match.
   verifyExistHash,
+  cleanSalt, // cleanSalt will remove the stateful salt for the partition and id.
 } = new SHash(new MemoryStorage(), demoHash) // You could pass in any hashing algorithm
 
 // It is recommended to use a hybrid salt from environment variable and hard-coded like: `salted${env.SECRET_SAUCE}`

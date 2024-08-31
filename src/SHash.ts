@@ -63,6 +63,11 @@ export class SHash {
       throw new Error('Hash mismatch')
   }
 
+  cleanSalt = async (partition: string, id: string) => {
+    validParams(partition, id)
+    await this.storage.setSalt(partition, id, undefined)
+  }
+
   private _getHash = async (salt: string, partition: string, id: string, create = true): Promise<string | undefined> => {
     validParams(partition, id)
 
