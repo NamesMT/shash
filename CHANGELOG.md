@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.5
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.4...v0.3.5)
+
+### 🚀 Enhancements
+
+- Accept more flexible `id` ([930d55f](https://github.com/namesmt/shash/commit/930d55f))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.3.4
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.3...v0.3.4)
