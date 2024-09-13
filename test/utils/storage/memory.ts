@@ -5,7 +5,7 @@ import type { SHashStorageInterface } from '~/SHash'
  * 
  * This is not recommended for production use, but it is useful for testing.
  */
-export class MemoryStorage implements SHashStorageInterface {
+export class MemoryStorage implements SHashStorageInterface<string> {
   store: Record<string, string> = {}
 
   async getSalt(partition: string, id: string) { return this.store[`${partition}#${id}`] }
