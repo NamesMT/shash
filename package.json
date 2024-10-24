@@ -2,7 +2,7 @@
   "name": "@namesmt/shash",
   "type": "module",
   "version": "0.3.5",
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.12.2",
   "description": "SHash is a collection of helpers to implement a hash secret with multiple layers of security",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=20.13.1"
+    "node": ">=20.18.0"
   },
   "scripts": {
     "start": "NODE_ENV=dev tsx src/index.ts",
@@ -52,16 +52,16 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.27.1",
-    "@types/node": "^20.16.1",
-    "@vitest/coverage-v8": "^2.0.5",
-    "eslint": "^9.9.1",
-    "lint-staged": "^15.2.9",
+    "@antfu/eslint-config": "^2.27.3",
+    "@types/node": "^20.17.0",
+    "@vitest/coverage-v8": "^2.1.3",
+    "eslint": "^9.13.0",
+    "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1",
-    "tsx": "^4.17.0",
-    "typescript": "^5.5.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.5"
+    "vitest": "^2.1.3"
   },
   "pnpm": {
     "overrides": {
