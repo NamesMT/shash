@@ -9,6 +9,6 @@
     "@namesmt/shash": "workspace:^",
     "nodemon": "^3.1.11",
     "vite": "^5.4.21",
-    "vite-plugin-inspect": "^0.10.6"
+    "vite-plugin-inspect": "^11.4.1"
   }
 }
