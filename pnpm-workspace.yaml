@@ -1,2 +1,11 @@
 packages:
   - playground
+overrides:
+  eslint-plugin-jsonc: ^2.19.1
+  hasown: npm:@nolyfill/hasown@^1.0.44
+  is-core-module: npm:@nolyfill/is-core-module@^1.0.39
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
+  unrs-resolver: true
+minimumReleaseAge: 0
