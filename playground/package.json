@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@namesmt/shash": "workspace:^",
-    "nodemon": "^3.1.11",
+    "nodemon": "^3.1.14",
     "vite": "^5.4.21",
     "vite-plugin-inspect": "^0.10.6"
   }
