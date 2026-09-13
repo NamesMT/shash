@@ -27,14 +27,14 @@ export class SHash<I = string> {
 
   /**
    * Get a hash for a given partition and id.  
-   * Will creates the hash if not exist.
+   * Will create the hash if it does not exist.
    */
   getHash = async (salt: string, partition: string, id: I): Promise<string> => {
     return this._getHash(salt, partition, id, true) as Promise<string>
   }
 
   /**
-   * Get existing hash of the a given partition and id.
+   * Get the existing hash of a given partition and id.
    */
   getExistHash = async (salt: string, partition: string, id: I) => {
     return this._getHash(salt, partition, id, false)
@@ -42,9 +42,9 @@ export class SHash<I = string> {
 
   /**
    * Get hash of the given partition and id, then verify it with the given key.  
-   * Will creates the hash if not exist.
+   * Will create the hash if it does not exist.
    * 
-   * Throw when the hash does not match the given key.
+   * Throws when the hash does not match the given key.
    */
   verifyHash = async (salt: string, partition: string, id: I, key: string) => {
     const hash = await this.getHash(salt, partition, id)
@@ -55,7 +55,7 @@ export class SHash<I = string> {
   /**
    * Get existing hash of the given partition and id, then verify it with the given key.
    * 
-   * Throw when the hash does not exist or does not match the given key.
+   * Throws when the hash does not exist or does not match the given key.
    */
   verifyExistHash = async (salt: string, partition: string, id: I, key: string) => {
     const hash = await this.getExistHash(salt, partition, id)
