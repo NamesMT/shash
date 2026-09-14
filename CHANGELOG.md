@@ -1,6 +1,31 @@
 # Changelog
 
 
+## v0.3.6
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.5...v0.3.6)
+
+### 🩹 Fixes
+
+- **types:** Exclude playground from root typecheck ([d3551da](https://github.com/namesmt/shash/commit/d3551da))
+- Use relative paths (drop deprecated `baseUrl`) ([dab288d](https://github.com/namesmt/shash/commit/dab288d))
+
+### 📖 Documentation
+
+- Fix SHash JSDoc grammar ([45db6d7](https://github.com/namesmt/shash/commit/45db6d7))
+
+### 🏡 Chore
+
+- Migrate to pnpm 12 ([2fb25f9](https://github.com/namesmt/shash/commit/2fb25f9))
+
+### 🤖 CI
+
+- Use pnpm/action-setup for pnpm 12 ([4cceb32](https://github.com/namesmt/shash/commit/4cceb32))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.5
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.4...v0.3.5)
