@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { MemoryStorage } from './utils/storage/memory'
-import { SHash } from '~/index'
+import { SHash } from '#src/index.js'
 
 describe('basic tests', () => {
   it('basic usages should work', async () => {

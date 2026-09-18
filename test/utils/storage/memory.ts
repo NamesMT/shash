@@ -1,4 +1,4 @@
-import type { SHashStorageInterface } from '~/SHash'
+import type { SHashStorageInterface } from '#src/SHash.js'
 
 /**
  * This is a simple in-memory storage implementation.
