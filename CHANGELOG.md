@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v0.3.7
+
+[compare changes](https://github.com/namesmt/shash/compare/v0.3.6...v0.3.7)
+
+### 💅 Refactors
+
+- Use crypto.randomUUID for stateful salt ([ec08447](https://github.com/namesmt/shash/commit/ec08447))
+
+### 📦 Build
+
+- ⚠️  Migrate to tsdown with native import maps ([7148e9d](https://github.com/namesmt/shash/commit/7148e9d))
+
+### 🤖 CI
+
+- Bump node to 22 and codecov-action to v5 ([e848e18](https://github.com/namesmt/shash/commit/e848e18))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Migrate to tsdown with native import maps ([7148e9d](https://github.com/namesmt/shash/commit/7148e9d))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.6
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.5...v0.3.6)
