@@ -76,7 +76,7 @@ export class SHash<I = string> {
 
     if (!statefulSalt) {
       if (create) {
-        await this.storage.setSalt(partition, id, String(Date.now() + Math.random()))
+        await this.storage.setSalt(partition, id, crypto.randomUUID())
 
         statefulSalt = await this.storage.getSalt(partition, id)
       }
