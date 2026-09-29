@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.8
+
+[compare changes](https://github.com/NamesMT/shash/compare/v0.3.7...v0.3.8)
+
+### 📖 Documentation
+
+- Add npm metadata and correct repository URL casing ([24ac22d](https://github.com/NamesMT/shash/commit/24ac22d))
+
+### 🏡 Chore
+
+- **devcontainer:** Migrate from Alpine (musl) to Arch (glibc) image ([5d6a9c8](https://github.com/NamesMT/shash/commit/5d6a9c8))
+- **devcontainer:** Bootstrap pnpm via corepack when missing ([b874a8b](https://github.com/NamesMT/shash/commit/b874a8b))
+
+### 🤖 CI
+
+- **release:** Dispatch releases by hand and add an AGENTS.md ([fe85892](https://github.com/NamesMT/shash/commit/fe85892))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.3.7
 
 [compare changes](https://github.com/namesmt/shash/compare/v0.3.6...v0.3.7)
