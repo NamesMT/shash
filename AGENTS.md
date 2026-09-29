@@ -52,4 +52,6 @@ tag on the runner. One-time trusted-publisher setup is in `release.yml`'s header
   only because CI is set — use `pnpm run check` locally for one-shot tests.
 - `src/SHash.ts` calls global `crypto.randomUUID()` with no import, relying on Node's webcrypto
   global; that is why `engines.node` is `>=22`.
+- `id` never enters the digest — `_getHash` hashes `${statefulSalt}${salt}${partition}`; `id` only selects the stored salt.
+- `getExistHash` resolves to `undefined` when no salt exists; `verifyExistHash` throws `Hash mismatch` for both a missing and a mismatched key.
 - `dist/` is gitignored and rebuilt by `prepublishOnly` before any publish.

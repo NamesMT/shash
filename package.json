@@ -7,16 +7,24 @@
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/namesmt",
-  "homepage": "https://github.com/namesmt/shash#readme",
+  "homepage": "https://github.com/NamesMT/shash#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namesmt/shash.git"
+    "url": "git+https://github.com/NamesMT/shash.git"
   },
-  "bugs": "https://github.com/namesmt/shash/issues",
+  "bugs": "https://github.com/NamesMT/shash/issues",
   "keywords": [
     "hash",
     "salt",
-    "secret"
+    "secret",
+    "hashing",
+    "stateful-salt",
+    "sha256",
+    "verification",
+    "security",
+    "crypto",
+    "typescript",
+    "esm"
   ],
   "sideEffects": false,
   "exports": {
