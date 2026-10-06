@@ -66,7 +66,7 @@ tag on the runner. One-time trusted-publisher setup is in `release.yml`'s header
   rule stated twice, a guard bypassed by a second path — means fix the class: one implementation, one
   guard. That is the work, not a follow-up to ask for.
 - Verify before claiming, and say which direction you checked. Green is not proof it pinned anything:
-  only `partition`'s throw is asserted, so a `salt` that stopped being validated would still pass.
+  the tests assert one invalid param, not every guard.
 - If recall of this project is missing, read this file and `git log` before acting.
 
 ## Conciseness (applies everywhere)
@@ -77,5 +77,5 @@ intent. Docs: one idea per sentence; cut what would not change what a reader doe
 
 ## User-facing docs
 
-`README.md` is the only one here — there is no `docs/`: concise first read, depth behind `<details>`
-spoilers, visuals for skimmers. It ships with the change, in the same commit.
+`README.md` is the only user-facing doc here — there is no `docs/`: concise first read, depth behind
+`<details>` spoilers, visuals for skimmers. It ships with the change, in the same commit.
