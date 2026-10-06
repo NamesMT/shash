@@ -5,6 +5,20 @@ ESM only, `#src/*` → `src/*` alias, [tsdown](https://github.com/rolldown/tsdow
 [Vitest](https://vitest.dev) tests. It ships no hashing algorithm — the caller passes a `hasher`, and
 SHash wraps it with a stateful salt (plus optional extra salt).
 
+## Docs
+
+Three tiers, so a reader loads only what the task needs:
+
+1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
+2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
+   compatibility rules. Read on demand.
+3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
+
+**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
+above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
+it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
+links it.
+
 ## Commands
 
 ```sh
