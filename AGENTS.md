@@ -53,6 +53,29 @@ pnpm run dev                   # tsx watch on src/index.ts (alias of `watch`)
 - Comments are sparse — intent, not mechanics; the public API carries JSDoc. `validParams` requires
   `id` truthy and every other parameter to be a non-empty string.
 
+## How to work here
+
+- Check the callers before you change it; say when the impact is unclear rather than guessing. Never
+  overwrite or delete a large section you have not understood; do not invent requirements — surface
+  what looks needed.
+- Report the risk, not only the change — correctness, security, operational, integration.
+- **Fix the root cause, not the instance.** The same bug under a different name — a copied helper, a
+  rule stated twice, a guard bypassed by a second path — means fix the class: one implementation, one
+  guard. That is the work, not a follow-up to ask for.
+- **Verify before claiming, and say what you checked.** A green test proves only what it asserts — **break the thing it guards and watch it fail.** If it still passes, either the test is decoration or a different guard is running; find out which. Where a stub cannot answer the question, drive the real thing. The tests assert one invalid param, not every guard. Mark anything unverified as unverified.
+- If recall of this project is missing, read this file and `git log` before acting.
+
+## Conciseness
+
+Prune verbose, keep correctness — code, comments, docs alike. Code: a comment only for non-obvious
+intent. Docs: one idea per sentence; cut what would not change what a reader does. Delete history
+`git log` already holds — keep the rule, not the story. Never drop a caveat to save a line.
+
+## User-facing docs
+
+`README.md` is the only user-facing doc here — there is no `docs/`. Keep it a **concise first read**;
+put depth in `<details>` spoilers and add visuals where they help. It ships with the change, in the same commit.
+
 ## Releasing
 
 Manual and version-first: **Actions → Release → Run workflow** with the version. `release.yml` is the
@@ -69,27 +92,3 @@ tag on the runner. One-time trusted-publisher setup is in `release.yml`'s header
 - `id` never enters the digest — `_getHash` hashes `${statefulSalt}${salt}${partition}`; `id` only selects the stored salt.
 - `getExistHash` resolves to `undefined` when no salt exists; `verifyExistHash` throws `Hash mismatch` for both a missing and a mismatched key.
 - `dist/` is gitignored and rebuilt by `prepublishOnly` before any publish.
-
-## How to work here
-
-- Check the callers before you change it; say when the impact is unclear rather than guessing. Never
-  overwrite or delete a large section you have not understood; do not invent requirements — surface
-  what looks needed.
-- Report the risk, not only the change — correctness, security, operational, integration.
-- **Fix the root cause, not the instance.** The same bug under a different name — a copied helper, a
-  rule stated twice, a guard bypassed by a second path — means fix the class: one implementation, one
-  guard. That is the work, not a follow-up to ask for.
-- Verify before claiming, and say which direction you checked. Green is not proof it pinned anything:
-  the tests assert one invalid param, not every guard.
-- If recall of this project is missing, read this file and `git log` before acting.
-
-## Conciseness (applies everywhere)
-
-Prune verbose, keep correctness — code, comments, docs alike. Code: a comment only for non-obvious
-intent. Docs: one idea per sentence; cut what would not change what a reader does. Delete history
-`git log` already holds — keep the rule, not the story. Never drop a caveat to save a line.
-
-## User-facing docs
-
-`README.md` is the only user-facing doc here — there is no `docs/`. Keep it a **concise first read**;
-put depth in `<details>` spoilers and add visuals where they help. It ships with the change, in the same commit.
