@@ -77,5 +77,5 @@ intent. Docs: one idea per sentence; cut what would not change what a reader doe
 
 ## User-facing docs
 
-`README.md` is the only user-facing doc here — there is no `docs/`: concise first read, depth behind
-`<details>` spoilers, visuals for skimmers. It ships with the change, in the same commit.
+`README.md` is the only user-facing doc here — there is no `docs/`. Keep it a **concise first read**;
+put depth in `<details>` spoilers and add visuals where they help. It ships with the change, in the same commit.
